@@ -13,12 +13,15 @@ import {
 import { pingServer } from "../components/pingServer";
 import TestimonialCarousel from '../components/Testimony';
 
-const socket = io({
+const SOCKET_URL = import.meta.env.VITE_API_URL;
+
+const socket = io(SOCKET_URL, {
   path: '/socket.io/',
   transports: ['websocket'],
   reconnectionAttempts: 5,
   reconnectionDelay: 1000,
   reconnectionDelayMax: 5000,
+  withCredentials: true 
 });
 
 interface LatLng { lat: number; lng: number; }
@@ -107,8 +110,9 @@ const TrackPage: React.FC = () => {
     setLoading(true);
 
     try {
+      const API_BASE_URL = import.meta.env.VITE_API_URL;
       
-      const res = await fetch('/api/track', {
+      const res = await fetch(`${API_BASE_URL}/api/track`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ code: code.trim() }),

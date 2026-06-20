@@ -5,7 +5,7 @@ import Package from '../models/package.js';
 const router = express.Router();
 
 // Handles POST requests to http://localhost:4000/track
-router.post('/track', async (req, res) => {
+router.post('/api/track', async (req, res) => {
   try {
     const { code } = req.body;
 

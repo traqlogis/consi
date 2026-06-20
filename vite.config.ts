@@ -18,7 +18,7 @@ export default defineConfig(({ mode }) => {
         "/api": {
           target: backendTarget, 
           changeOrigin: true,
-          rewrite: (path) => path.replace(/^\/api/, ''),
+          // rewrite: (path) => path.replace(/^\/api/, ''),
         },
         "/socket.io": {
           target: backendTarget, 

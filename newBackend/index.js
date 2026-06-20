@@ -37,8 +37,8 @@ app.use((req, res, next) => {
 
 // Routes
 app.use('/', trackRoutes);
-app.use('/admin', adminRoutes);
-app.get("/ping", (req, res) => {
+app.use('/api/admin', adminRoutes);
+app.get("/api/ping", (req, res) => {
     console.log("Ping received");
   res.status(200).send("pong");
 });

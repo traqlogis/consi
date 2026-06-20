@@ -1,7 +1,9 @@
 // pingServer.ts
 export const pingServer = async () => {
+  const API_BASE_URL = import.meta.env.VITE_API_URL;
+      
   try {
-    await fetch("/api/ping", {
+    await fetch(`${API_BASE_URL}/api/ping`, {
       method: "GET",
       cache: "no-cache",
     });
