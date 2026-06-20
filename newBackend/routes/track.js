@@ -1,6 +1,6 @@
 // backend/routes/track.js
 import express from 'express';
-import Package from '../models/Package.js';
+import Package from '../models/package.js';
 
 const router = express.Router();
 

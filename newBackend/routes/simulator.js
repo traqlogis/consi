@@ -1,4 +1,4 @@
-import Package from '../models/Package.js';
+import Package from '../models/package.js';
 import { Op } from 'sequelize';
 
 function convertDurationToMinutes(durationStr) {
