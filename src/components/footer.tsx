@@ -126,7 +126,7 @@ const Footer: React.FC = () => {
 
   const socialLinks = [
     // { icon: <Facebook className="h-5 w-5" />, href: '#', name: 'Facebook' },
-    { icon: <FaWhatsapp className="h-5 w-5" size={24} color="#25D366" />, href: 'https://wa.me/+16474936699', name: 'Whatsapp' },
+    { icon: <FaWhatsapp className="h-5 w-5" size={24} color="#25D366" />, href: 'https://wa.me/+1', name: 'Whatsapp' },
     // { icon: <Twitter className="h-5 w-5" />, href: '#', name: 'Twitter' },
     { icon: <XIcon size={24} className="text-sky-500" />, href: "#", name: 'Twitter'},
     // { icon: <Instagram className="h-5 w-5" />, href: '#', name: 'Instagram' },
